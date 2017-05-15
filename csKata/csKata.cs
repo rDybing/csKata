@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace Lessons_01 {
+namespace csKata {
 	class csKata {
 		static void Main(string[] args) {
 			FizzBuzz.Run();
