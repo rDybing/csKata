@@ -6,5 +6,5 @@
 
 This will be pretty much the same as goKata, just using c# instead.
 
-v1.0: Initial commit
-v1.1: Added FizzBuzz
+* v1.0: Initial commit
+* v1.1: Added FizzBuzz
