@@ -4,7 +4,38 @@ using static System.Console;
 namespace csKata {
 	class csKata {
 		static void Main(string[] args) {
-			FizzBuzz.Run();
+			string input = "";
+			bool quit = false;
+
+			help();
+
+			while(quit == false){
+				Write("CS :> ");
+				input = ReadLine();
+
+				switch (input) {
+					case "fizzbuzz":
+						FizzBuzz.Run();
+						break;
+					case "help":
+						help();
+						break;
+					case "quit":
+						quit = true;
+						break;
+				}
+			}
+		}
+
+
+
+		static void help() {
+			WriteLine("Available Commands");
+			WriteLine(" - fizzbuzz   | the drinking game");
+			//WriteLine(" - gcd        | find greatest common denominator");
+			//WriteLine(" - clock      | word clock");
+			WriteLine(" - help       | list of commands");
+			WriteLine(" - quit       | exit this application");
 		}
 	}
 

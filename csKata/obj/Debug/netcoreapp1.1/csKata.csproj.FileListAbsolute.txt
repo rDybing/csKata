@@ -14,3 +14,4 @@ D:\Source\CS\csKata\csKata\bin\Debug\netcoreapp1.1\csKata.pdb
 D:\Source\CS\csKata\csKata\obj\Debug\netcoreapp1.1\csKata.AssemblyInfo.cs
 D:\Source\CS\csKata\csKata\obj\Debug\netcoreapp1.1\csKata.dll
 D:\Source\CS\csKata\csKata\obj\Debug\netcoreapp1.1\csKata.pdb
+D:\Source\CS\csKata\csKata\obj\Debug\netcoreapp1.1\csKata.csprojResolveAssemblyReference.cache
