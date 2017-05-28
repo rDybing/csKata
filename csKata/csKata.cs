@@ -63,9 +63,6 @@ namespace csKata {
     class GCD {
         public static void Run() {
             int high, low, first, second, gcdenom;
-            int counter = 0;
-            bool exit = false;
-            bool reduced = false;
 
             first = getInput("First");
             second = getInput("Second");
@@ -78,41 +75,18 @@ namespace csKata {
                 high = second;
                 low = first;
             }
+			
+			while (high != 0 && low != 0) {
+				if (high > low) {
+					high %= low;
+				} else {
+					low %= high;
+				}
+			}
 
-            // reduce the set if both are divisible by 2
-            while (exit == false) {
-                if (high % 2 == 0 && low % 2 == 0) {
-                    high /= 2;
-                    low /= 2;
-                    WriteLine($"{high} - {low}");
-                    counter++;
-                } else {
-                    exit = true;
-                }
-                if (counter > 99) {
-                    exit = true;
-                }
-            }
-            while (high != low) {
-                reduced = false;
-                // reduce one or the other
-                if (high % 2 == 0) {
-                    high /= 2;
-                    reduced = true;
-                } else if (low % 2 == 0) {
-                    low /= 2;
-                }
-                // see if swap high/low
-                if (high > low) {
-                    high = (high - low) / 2;
-                } else {
-                    low = (low - high) / 2;
-                }                
-                WriteLine($"Current high: {high}");
-            }
-            WriteLine();
-            gcdenom = Convert.ToInt32(high * Math.Pow(counter, 2));
-            WriteLine($"c: {counter} || h: {high}");
+			gcdenom = high == 0 ? low : high;
+			
+			WriteLine();
             WriteLine($"Greatest common denominator is: {gcdenom}");
         }
 
